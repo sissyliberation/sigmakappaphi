@@ -1,0 +1,90 @@
+#footer {
+  padding-top:10px;
+  background-color:#002366;
+}
+#site-info-footer {
+  font-size:.9em;
+  padding-top:5px;
+  height: 30px;
+  background-color:transparent;
+  color:white;
+}
+#site-info-footer a {
+  color:#FFBBFF;
+}
+
+.nav li a {
+  font-size: 1.4em;
+  color: #002366;
+  font-weight: 500;
+}
+body  {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul.footericons li  {
+  display:inline-block;
+  text-align:center;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+ul.footericons li a  {
+  width:20px;
+  height:20px;
+  color:#CCCCCC;
+}
+ul.footericons li a:hover  {
+  color:black;
+}
+
+.nav li.active   {
+  /*background-color: ;*/
+}
+
+#wrap  {
+  background-color: white;  
+};
+
+.banner { position: relative; overflow: auto; 
+  background: #0f0; 
+  min-height: 100px; }
+.banner li { list-style: none; }
+.banner ul li { float: left;}
+
+#holder {
+  padding-top: 20px;
+  background-color: white;
+  padding-left:50px;
+  padding-bottom:30px;
+  padding-right:50px;
+  text-align: center;
+}
+a, h1, h2, h3, h4, h5, h6 {color:#002366; font-family: 'Cardo', serif;}
+a:hover{
+  color:#002366;
+  text-decoration: underline;
+}
+
+h1{
+  font-size: 5em;
+  font-weight:300;
+}
+
+.content {text-align: left;}
+.centered {text-align:center;}
+
+.aboutme {
+  font-family: 'Cardo', serif;
+  font-size: 1.1em;
+  width:90%;
+  margin:0;
+  padding:0;
+}
+.aboutme img {
+width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  -webkit-border-radius: 125px;
+  -moz-border-radius: 125px;
+}

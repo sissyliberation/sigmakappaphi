@@ -1,0 +1,84 @@
+#FORM_1 {
+    color: rgb(189, 189, 189);
+    height: 486.6666564941406px;
+    text-align: center;
+    width: 100%;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom:20px;
+}
+
+.field {
+    clear: both;
+    color: rgb(189, 189, 189);
+    height: 50px;
+    text-align: left;
+    width: 450px;
+     margin: 5px 0px;
+}
+
+#INPUT_4, #INPUT_7 {
+  font: normal normal normal 18.66666603088379px/normal 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    height: 35px;
+    width: 422px;
+    border: 1.3333333730697632px solid rgb(212, 212, 212);
+    border-radius: 4px 4px 4px 4px;
+    margin: 0px;
+    padding: 1px 13px;
+}
+
+#INPUT_10 {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1.3333333730697632px 0px inset;
+    box-sizing: content-box;
+    color: rgb(62, 62, 62);
+    height: 35px;
+    text-decoration: none solid rgb(62, 62, 62);
+    width: 422px;
+    border: 1.3333333730697632px solid rgb(212, 212, 212);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 18.66666603088379px/normal 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    margin: 0px;
+    padding: 1px 13px;
+    
+}/*#INPUT_10*/
+
+#DIV_11 {
+    clear: both;
+    color: rgb(189, 189, 189);
+    height: 256.6666564941406px;
+    text-align: center;
+    width: 450px;
+    margin: 5px 0px;
+    font: normal normal normal 18.66666603088379px/normal 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}/*#DIV_11*/
+
+#TEXTAREA_13 {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 0px 1.3333333730697632px 0px inset;
+    box-sizing: content-box;
+    color: rgb(62, 62, 62);
+    display: block;
+    height: 239px;
+    width: 422px;
+    border: 1.3333333730697632px solid rgb(212, 212, 212);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 18.66666603088379px/normal 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    padding: 13px 13px 2px;
+}/*#TEXTAREA_13*/
+
+#INPUT_14 {
+  color:#002366;
+  background-color:#f3f3f3;
+    display: block;
+    float: left;
+    height: 85px;
+    text-align: center;
+    width: 450px;
+    border:none;
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 18.66666603088379px/normal 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    padding: 1px 13px;
+}/*#INPUT_14*/
+#INPUT_14:hover{
+    background-color: black;
+    color:white;
+}
