@@ -44,7 +44,7 @@ ul.footericons li a:hover  {
 
 #wrap  {
   background-color: white;  
-};
+}
 
 .banner { position: relative; overflow: auto; 
   background: #0f0; 
@@ -52,14 +52,7 @@ ul.footericons li a:hover  {
 .banner li { list-style: none; }
 .banner ul li { float: left;}
 
-#holder {
-  padding-top: 20px;
-  background-color: white;
-  padding-left:50px;
-  padding-bottom:30px;
-  padding-right:50px;
-  text-align: center;
-}
+
 a, h1, h2, h3, h4, h5, h6 {color:#002366; font-family: 'Cardo', serif;}
 a:hover{
   color:#002366;
@@ -82,9 +75,22 @@ h1{
   padding:0;
 }
 .aboutme img {
-width: 250px;
+  width: 250px;
   height: 250px;
   border-radius: 125px;
   -webkit-border-radius: 125px;
   -moz-border-radius: 125px;
+}
+.placement {
+  margin-left: 0;
+  margin-right: 0;
+  background-color:white;
+  margin-top:20px;
+  margin-bottom:20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.blue {
+  background-color: #002366;
+  color:white;
 }
