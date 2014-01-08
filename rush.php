@@ -14,7 +14,8 @@
     <link href="includes/bootstrap.css" rel="stylesheet">
     <link href="includes/sticky-footer-navbar.css" rel="stylesheet">
     <link href="includes/font-awesome.css" rel="stylesheet">
-  <link href="includes/style.css" rel="stylesheet">
+    <link href="includes/style.css" rel="stylesheet">
+    <link href="includes/form.css" rel="stylesheet">
 
 </head>
 
@@ -30,7 +31,7 @@
       <nav class="pull-right" id="navigation">
         <ul class="nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="rush.html">Rush</a></li>
+          <li><a href="rush.php">Rush</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">About<b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -80,7 +81,39 @@
       </div>
     </div>
   </div>
+  <div class="placement blue"> 
+    <div class="container" >
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 style="color:white;">Recruitment Questionaire:</h1>
+          <form method="post" action="/contact/index.php" id="FORM_1" style="padding-top:20px;">
+            <div class="field">
+              <input type="text" name="contactname" id="INPUT_7" class="required" placeholder="Name" />
+            </div>
+            <div class="field">
+              <input type="text" name="email" id="INPUT_7" class="required email" placeholder="Email" />
+            </div>
+            <div class="field">
+              <input type="text" name="phone" id="INPUT_7" class="required" placeholder="Phone Number" />
+            </div>
+            <div class="field">
+              <input type="text" name="hometown" id="INPUT_7" class="required " placeholder="Hometown" />
+            </div>
+            <div class="field">
+              <input type="text" name="highschool" id="INPUT_7" class="required " placeholder="High School" />
+            </div>
+            <div class="field">
+              <input type="text" name="gpa" id="INPUT_7" placeholder="High School/College GPA" />
+            </div>
+            <button id="INPUT_15" >SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 
 <div id="footer">
   <div class="container" style="text-align:center">
@@ -95,8 +128,7 @@
     Kappa Phi, 2013.</span>
     
     <span style=
-    "float:right;display:inline-block;">Created by: <a href="">Yves
-    Courtois</a></span></p>
+    "float:right;display:inline-block;">Created by: <a href="http://yvescourtois.com/">Yves Courtois</a></span></p>
   </div>
 </div>
 
