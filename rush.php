@@ -15,7 +15,6 @@
     <link href="includes/sticky-footer-navbar.css" rel="stylesheet">
     <link href="includes/font-awesome.css" rel="stylesheet">
   <link href="includes/style.css" rel="stylesheet">
-    
 
 </head>
 
@@ -46,19 +45,41 @@
       </nav>
     </header>
   </div><!-- Begin page content -->
-
-    <!-- Begin page content -->
-<!--     <div class="container" id="holder">
-      <div class="banner">
-        <ul>
-          <li><img src="images/symbol.jpg"/></li>
-          <li><img src="images/1.jpg"/></li>
-          <li><img src="images/2.jpg"/></li>
-          <li><img src="images/3.jpg"/></li>
-        </ul>
+  <div class="placement"> 
+    <div class="container" >
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 style="color:#ccc">What is Rush?</h1>
+          <p>Rush is when a fraternity or sorority "open their doors" and host a series of social events and meetings in order for members of the fraternity or sorority to get to know the students who are interested in joining their Greek organization. At the end of rush, the students that the Greek organization feel are the best fit to join them are given a "bid," which is a formal invitation to join a fraternity or sorority.</p>
+        </div>
       </div>
-    </div> -->
-
+    </div>
+  </div>
+  <div class="placement grey"> 
+    <div class="container" >
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 style="color:white;">This Semester's Rush Events:</h1>
+          <div class="rushevents">
+              <?php
+              $data = array();
+              $handle = @fopen("rushevents.txt", "r");
+              if ($handle) {
+                while (($buffer = fgets($handle, 4096)) !== false) {
+                  array_push($data, $buffer);
+                }
+                foreach ($data as $i) {
+                  echo "<p>$i</p>";
+                }
+                unset($i);
+                fclose($handle);
+              }
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="footer">
