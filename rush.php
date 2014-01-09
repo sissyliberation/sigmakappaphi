@@ -37,7 +37,7 @@
             <ul class="dropdown-menu">
               <li><a href="contact.html">Contact</a></li>
               <li><a href="officers.html">Officers</a></li>
-              <li><a href="history.html">History</a></li>
+               <li><a href="history.html">History</a></li>
             </ul>
           </li>
           <li><a href="gallery.html">Gallery</a></li>
@@ -51,7 +51,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 style="color:#ccc">What is Rush?</h1>
-          <p>Rush is when a fraternity or sorority "open their doors" and host a series of social events and meetings in order for members of the fraternity or sorority to get to know the students who are interested in joining their Greek organization. At the end of rush, the students that the Greek organization feel are the best fit to join them are given a "bid," which is a formal invitation to join a fraternity or sorority.</p>
+          <p class="description">Rush is when a fraternity or sorority "open their doors" and host a series of social events and meetings in order for members of the fraternity or sorority to get to know the students who are interested in joining their Greek organization. At the end of rush, the students that the Greek organization feel are the best fit to join them are given a "bid," which is a formal invitation to join a fraternity or sorority.</p>
         </div>
       </div>
     </div>
@@ -118,27 +118,24 @@
 <div id="footer">
   <div class="container" style="text-align:center">
     <ul class="footericons">
-       <li><a href=""><i class="fa fa-facebook fa-3x"></i></a></li>
-        <li><a href=""><i class="fa fa-twitter fa-3x"></i></a></li>
+       <li><a href="https://www.facebook.com/SKPhi2007"><i class="fa fa-facebook fa-3x"></i></a></li>
+        <li><a href="https://twitter.com/UT_SKPhi"><i class="fa fa-twitter fa-3x"></i></a></li>
     </ul>
   </div>
 
   <div class="container" id="site-info-footer">
-    <p><span style="float:left;display:inline-block;">© Alpha Chapter of Sigma
-    Kappa Phi, 2013.</span>
-    
-    <span style=
-    "float:right;display:inline-block;">Created by: <a href="http://yvescourtois.com/">Yves Courtois</a></span></p>
+    <p><span style="float:left;display:inline-block;">© Alpha Chapter of Sigma Kappa Phi, 2013.</span>
+    <span style="float:right;display:inline-block;">Created by: <a href="http://yvescourtois.com/">Yves Courtois</a></span></p>
   </div>
 </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="includes/jquery-1.10.2.min.js"></script>
-    <script src="includes/bootstrap.js"></script>
-    <script src="includes/unslider.min.js"></script>
-    <script src="includes/ready.js"></script>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="includes/jquery-1.10.2.min.js"></script>
+  <script src="includes/bootstrap.js"></script>
+  <script src="includes/unslider.min.js"></script>
+  <script src="includes/ready.js"></script>
   
 
 </body></html>
