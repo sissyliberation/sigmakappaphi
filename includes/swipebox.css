@@ -234,7 +234,7 @@ html.swipebox {
 /* Skin 
 --------------------------*/
 #swipebox-overlay {
-  background: rgba(0,0,0,.);
+  background: rgba(0,0,0,.95);
 }
 
 #swipebox-action, #swipebox-caption {
