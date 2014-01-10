@@ -7,10 +7,14 @@ $(document).ready(function(){
 	else{
 		$('#wrap').css("padding","0px");
 	}
+	console.log(window.location.pathname);
 	$('#slideshow').fadeSlideShow({
 		PlayPauseElement: false,
 		NextElement: false,
 		PrevElement: false,
 		ListElement: false
+	});
+	$(".swipebox").swipebox({
+		hideBarsDelay:0
 	});
 });
