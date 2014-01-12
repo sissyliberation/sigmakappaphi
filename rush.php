@@ -40,7 +40,7 @@
                <li><a href="history.html">History</a></li>
             </ul>
           </li>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="gallery.php">Gallery</a></li>
           <li><a href="parents.html">Parents</a></li>
         </ul>
       </nav>

@@ -15,6 +15,7 @@
     <link href="includes/sticky-footer-navbar.css" rel="stylesheet">
     <link href="includes/font-awesome.css" rel="stylesheet">
     <link href="includes/style.css" rel="stylesheet">
+    <link href="includes/swipebox.css" rel="stylesheet">
 
 </head>
 
@@ -48,16 +49,32 @@
   <div class="placement"> 
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
-          <h1>History</h1>
-          <h2 style="color:black;">
-          <p>Sigma Kappa Phi, Est. 2007</p>
-          <p style="font-size:80%">Sigma Kappa Phi, Multicultural Fraternity, Inc. was founded here at the University of Texas-Austin by 9 men, Joseph Edward Morales, James Santiago Casiano IV, Alexander Andrew Bartels, Esteban Alonso Salinas Jr., Yibo “John” Wang, Edgar Enrique Quijada, Nathan Marcus Levy, Tan Thanh Nguyen, and Justin Jay Lacap. 
-          The idea for Sigma Kappa Phi was conceived by Joseph Morales when he noticed that their where no true multicultural fraternities at the University of Texas campus. With this in mind, he began talking to and recruiting the other 8 founders, who were all University of Texas undergrads at the time, many of them even living in the same dormitory as him.</p>
-          <p style="font-size:80%">It took a lot of work and determination but all of it paid off for Morales and his fellow founders when on September 24, 2007, the Alpha Chapter of Sigma Kappa Phi was established as a Greek fraternity on campus.</p>
-          <p style="font-size:80%">Since its inception, Sigma Kappa Phi, while being one of the youngest fraternities on campus, has also been one of the fastest growing fraternities on campus. During the summer of 2010, the Beta Chapter was created at the University of Texas – Pan American. These are only the beginning steps and we hope to continue to grow and prosper. Blind to color, social standing, and culture; we firmly believe in the ideals of Sigma Kappa Phi, and we firmly believe that this fraternity will continue to make history and be a leader on our respective campuses and future campuses to come.</p>
-          </h2>
-
+        <div class="col-lg-12 img_gal">
+          <?php
+            $landscape = 0; 
+            $portrait = 0; 
+            $dir = 'images/large/landscape/';
+            if ($handle = opendir($dir)) {
+              while (($file = readdir($handle)) !== false){
+                if (!in_array($file, array('.', '..')) && !is_dir($dir.$file)) 
+                  $landscape++;
+              }
+            }
+            $dir = 'images/large/portrait/';
+            if ($handle = opendir($dir)) {
+              while (($file = readdir($handle)) !== false){
+                if (!in_array($file, array('.', '..')) && !is_dir($dir.$file)) 
+                  $portrait++;
+              }
+            }
+            for ($i=1; $i<= $landscape; $i++ ) {
+              echo "<a href='images/large/landscape/$i.jpg' class='swipebox' title=''><img src='images/large/landscape/$i.jpg' class='smallpic1' alt='image'></a>";
+            }
+            echo "<br>";
+            for ($i=1; $i<= $portrait; $i++ ) {
+              echo "<a href='images/large/portrait/$i.jpg' class='swipebox' title=''><img src='images/large/portrait/$i.jpg' class='smallpic2' alt='image'></a>";
+            }  
+          ?>
         </div>
       </div>
     </div>
@@ -80,12 +97,13 @@
   </div>
 </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="includes/jquery-1.10.2.min.js"></script>
-    <script src="includes/bootstrap.js"></script>
-    <script src="includes/ready.js"></script>
-  
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="includes/jquery-1.10.2.min.js"></script>
+  <script src="includes/bootstrap.js"></script>
+  <script src="includes/swipebox.js"></script>
+  <script src="includes/ready.js"></script>
+
 
 </body></html>
