@@ -35,7 +35,7 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">About<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.php">Contact</a></li>
               <li><a href="officers.html">Officers</a></li>
                <li><a href="history.html">History</a></li>
             </ul>
@@ -86,27 +86,58 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 style="color:white;">Recruitment Questionaire:</h1>
-          <form method="post" action="/contact/index.php" id="FORM_1" style="padding-top:20px;">
-            <div class="field">
-              <input type="text" name="contactname" id="INPUT_7" class="required" placeholder="Name" />
-            </div>
-            <div class="field">
-              <input type="text" name="email" id="INPUT_7" class="required email" placeholder="Email" />
-            </div>
-            <div class="field">
-              <input type="text" name="phone" id="INPUT_7" class="required" placeholder="Phone Number" />
-            </div>
-            <div class="field">
-              <input type="text" name="hometown" id="INPUT_7" class="required " placeholder="Hometown" />
-            </div>
-            <div class="field">
-              <input type="text" name="highschool" id="INPUT_7" class="required " placeholder="High School" />
-            </div>
-            <div class="field">
-              <input type="text" name="gpa" id="INPUT_7" placeholder="High School/College GPA" />
-            </div>
-            <button id="INPUT_15" >SEND</button>
-          </form>
+          <?php 
+          $action=$_REQUEST['action']; 
+          if ($action=="")  { 
+            ?> 
+            <form method="post" action="" id="FORM_1" style="padding-top:20px;" enctype="multipart/form-data">
+              <input type="hidden" name="action" value="submit">
+              <div class="field">
+                <input type="text" name="name" id="INPUT_7" class="required" placeholder="Name" />
+              </div>
+              <div class="field">
+                <input type="text" name="email" id="INPUT_7" class="required email" placeholder="Email" />
+              </div>
+              <div class="field">
+                <input type="text" name="phone" id="INPUT_7" class="required" placeholder="Phone Number" />
+              </div>
+              <div class="field">
+                <input type="text" name="hometown" id="INPUT_7" class="required " placeholder="Hometown" />
+              </div>
+              <div class="field">
+                <input type="text" name="highschool" id="INPUT_7" class="required " placeholder="High School" />
+              </div>
+              <div class="field">
+                <input type="text" name="gpa" id="INPUT_7" placeholder="High School/College GPA" />
+              </div>
+              <button id="INPUT_15" >SEND</button>
+            </form> 
+            <?php 
+          }  
+          else { 
+            $name=$_REQUEST['name']; 
+            $email=$_REQUEST['email']; 
+            $phone=$_REQUEST['phone'];
+            $hometown=$_REQUEST['hometown']; 
+            $highschool=$_REQUEST['highschool']; 
+            $gpa=$_REQUEST['gpa'];
+            if ($name==""||$email==""||$phone==""||$hometown==""||$highschool=="") {
+              echo "<h2 style='color:white'>All fields are required, please fill the form again.</h2>"; 
+            }
+            
+            else {
+              if($gpa=="") {
+                $gpa="N/A";
+              }
+              $subject="UTSKPhi Recruitment Questionaire";     
+              $from="From: $name<$email>\r\nReturn-path: $email";
+              $message="Name: $name\nPhone: $phone\nHometown: $hometown\nHighschool: $highschool\nGpa: $gpa";
+              mail("UT.SKPhi@gmail.com", $subject, $message, $from); 
+              echo "<h2 style='color:white'>Email sent!</h2>"; 
+            } 
+          }   
+          ?> 
+
         </div>
       </div>
     </div>

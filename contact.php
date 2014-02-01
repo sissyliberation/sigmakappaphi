@@ -36,7 +36,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href=
             "#">About<b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.php">Contact</a></li>
               <li><a href="officers.html">Officers</a></li>
               <li><a href="history.html">History</a></li>
             </ul>
@@ -53,25 +53,48 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="title">
-          <h1 style="padding-top:5px;">Contact Us</h1>
-        </div>
-        <form method="post" action="/contact/index.php" id="FORM_1">
-            <div class="field">
-              <input class="field" type="text" name="contactname" id="INPUT_4" class="required" placeholder="Name" />
-            </div>
-            <div class="field">
-              <input type="text" name="email" id="INPUT_7" class="required email" placeholder="Email" />
-            </div>
-            <div class="field">
-              <input type="text" name="subject" id="INPUT_10" class="required" placeholder="Subject" />
-            </div>
-            <div id="DIV_11">
-              <textarea rows="20" cols="20" name="message" id="TEXTAREA_13" class="required" placeholder="Message"></textarea>
-            </div>
-            <button id="INPUT_14" >SEND</button>
-  
-        </form>
-
+            <h1 style="padding-top:5px;">Contact Us</h1>
+          </div>
+          <?php 
+          $action=$_REQUEST['action']; 
+          if ($action=="")  { 
+            ?> 
+            <form  action="" method="POST" enctype="multipart/form-data" id="FORM_1"> 
+              <input type="hidden" name="action" value="submit">
+              <div class="field">
+                <input class="field" type="text" name="name" id="INPUT_4" class="required" placeholder="Name" />
+              </div>
+              <div class="field">
+                <input type="text" name="email" id="INPUT_7" class="required email" placeholder="Email" />
+              </div>
+              <div class="field">
+                <input type="text" name="subject" id="INPUT_10" class="required" placeholder="Subject" />
+              </div>
+              <div id="DIV_11">
+                <textarea rows="20" cols="20" name="message" id="TEXTAREA_13" class="required" placeholder="Message"></textarea>
+              </div>
+              <button id="INPUT_14" type="submit">SEND</button>
+            </form> 
+            <?php 
+          }  
+          else { 
+            $name=$_REQUEST['name']; 
+            $email=$_REQUEST['email']; 
+            $message=$_REQUEST['message'];
+            $subject=$_REQUEST['subject']; 
+            if (($name=="")||($email=="")||($message=="")) {
+              echo "<h2>All fields are required, please fill the form again.</h2>"; 
+            }
+            if($subject=="") {
+              $subject="UTSKPhi Contact Message"; 
+            } 
+            else {         
+              $from="From: $name<$email>\r\nReturn-path: $email";
+              mail("UT.SKPhi@gmail.com", $subject, $message, $from); 
+              echo "<h2>Email sent!</h2>"; 
+            } 
+          }   
+          ?> 
         </div>
       </div>
     </div>
