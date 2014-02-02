@@ -90,7 +90,12 @@
             } 
             else {         
               $from="From: $name<$email>\r\nReturn-path: $email";
-              mail("UT.SKPhi@gmail.com", $subject, $message, $from); 
+              mail("courtois1337@gmail.com", $subject, $message, $from); 
+              $name="";
+              $email="";
+              $message="";
+              $subject="";
+              $action="";
               echo "<h2>Email sent!</h2>"; 
             } 
           }   
