@@ -132,7 +132,7 @@
               $subject="UTSKPhi Recruitment Questionaire";     
               $from="From: $name<$email>\r\nReturn-path: $email";
               $message="Name: $name\nPhone: $phone\nHometown: $hometown\nHighschool: $highschool\nGpa: $gpa";
-              mail("courtois1337@gmail.com", $subject, $message, $from); 
+              mail("alpha.skphi@gmail.com", $subject, $message, $from); 
               $name=""; 
               $email="";
               $phone="";
