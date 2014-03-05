@@ -10,7 +10,10 @@
   color:white;
 }
 #site-info-footer a {
-  color:#FFBBFF;
+  color:#ccc;
+}
+#site-info-footer a:hover {
+  color:#fff;
 }
 
 .nav li a {
